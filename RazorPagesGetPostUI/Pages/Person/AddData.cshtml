@@ -1,0 +1,37 @@
+﻿@page
+@model RazorPagesGetPostUI.Pages.Person.AddDataModel
+@{
+}
+<h1>Add Person Info</h1>
+<div>
+    <form method="post">
+        <label asp-for="CurrentPerson.playerName"></label>
+        <input type="text"asp-for="CurrentPerson.playerName" placeholder="Name"/>
+        <label asp-for="CurrentPerson.Postion"></label>
+        <input type="text" asp-for="CurrentPerson.Postion" placeholder="Postion"/>
+        <label asp-for="CurrentPerson.Postion"></label>
+       <input type="submit"/>
+    </form>
+</div>
+<div>
+            Cross post to Index page
+            <form method="post" asp-page="Index">
+            <label asp-for="CurrentPerson.playerName"></label>
+        <input type="text"asp-for="CurrentPerson.playerName" placeholder="Name"/>
+        <label asp-for="CurrentPerson.Postion"></label>
+        <input type="text" asp-for="CurrentPerson.Postion" placeholder="Postion"/>
+        <label asp-for="CurrentPerson.Postion"></label>
+       <input type="submit"/>
+    </form>
+</div>
+<div>
+    Get to Index page
+    <form method="get" asp-page="Index">
+        <label asp-for="CurrentPerson.playerName"></label>
+        <input type="text" asp-for="CurrentPerson.playerName" placeholder="Name" />
+        <label asp-for="CurrentPerson.Postion"></label>
+        <input type="text" asp-for="CurrentPerson.Postion" placeholder="Postion" />
+        <label asp-for="CurrentPerson.Postion"></label>
+        <input type="submit" />
+    </form>
+</div>

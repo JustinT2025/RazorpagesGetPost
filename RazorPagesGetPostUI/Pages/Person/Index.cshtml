@@ -1,0 +1,17 @@
+﻿@page
+@model RazorPagesGetPostUI.Pages.Person.IndexModel
+@{
+    ViewData["Title"] = "Person Index";
+}
+<h1>Person Index</h1>
+
+@if (!string.IsNullOrEmpty(Model.CurrentPerson.playerName))
+{
+    <h1>Welcome @Model.CurrentPerson.playerName</h1>
+    <h2>What is your postion @Model.CurrentPerson.Postion</h2>
+}
+<ul>
+    <li><a asp-page="AddData" asp-route-playerName="Chris">Add Data for Chris</a></li>
+    <li><a asp-page="AddData" asp-route-playerName="Bob">Add Data for Bob</a></li>
+    <li><a asp-page="AddData" asp-route-playerName="Dave">Add Data for Dave</a></li>
+</ul>
